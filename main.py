@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.support.ui import Select
+from creds import username,password 
 import sys
 import time
 def get_assignments():
@@ -10,9 +11,9 @@ def get_assignments():
     driver.get("https://new.edmodo.com/calendar/schedule")
     time.sleep(5)
     username_element=driver.find_element_by_name("username")
-    username_element.send_keys("amankumarm441@gmail.com")
+    username_element.send_keys(username)
     password_element=driver.find_element_by_name("password")
-    password_element.send_keys("thisisedmodopassword")
+    password_element.send_keys(password)
     driver.find_element_by_id("qa-test-lightbox-login").click()
     time.sleep(5)
     outputArray=[]
@@ -34,4 +35,6 @@ def get_assignments():
         outputArray.append(outputObject)
     print(outputArray)
     time.sleep(5)
-    driver.close()  
+    driver.close()
+
+get_assignments()
