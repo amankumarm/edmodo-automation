@@ -33,8 +33,8 @@ def get_assignments():
             assignments["Group-name"]=testChild.find_elements_by_class_name("group-name")[j].get_attribute("innerHTML")
             outputObject['assigns'].append(assignments)
         outputArray.append(outputObject)
-    print(outputArray)
     time.sleep(5)
     driver.close()
+    return outputArray
 
-get_assignments()
+# get_assignments()
