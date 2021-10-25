@@ -1,3 +1,5 @@
 myvenv
 binary
 creds.py
+node_modules
+mob/node_modules
