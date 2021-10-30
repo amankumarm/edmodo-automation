@@ -56,4 +56,4 @@ def get_assignments():
     driver.close()
     return outputArray
 
-print(get_assignments())
+# print(get_assignments())

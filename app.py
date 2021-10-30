@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from main import get_assignments
 from flask_cors import CORS, cross_origin
+import os
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -11,4 +12,5 @@ def home():
     return jsonify(result)
     # return render_template('pages/placeholder.home.html')
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(port=port)
