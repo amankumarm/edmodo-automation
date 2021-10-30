@@ -7,7 +7,8 @@ from selenium.webdriver.firefox.options import Options
 import sys
 import time
 def get_assignments():
-    path=sys.path[0]+'/binary/geckodriver'
+    # path=sys.path[0]+'/binary/geckodriver'
+    path='./binary/geckodriver'
     print(path)
     options = Options()
     options.add_argument('--headless')
