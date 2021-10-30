@@ -10,9 +10,15 @@ def get_assignments():
     # path=sys.path[0]+'/binary/geckodriver'
     path='./binary/geckodriver'
     print(path)
-    options = Options()
-    options.add_argument('--headless')
-    driver = webdriver.Firefox(executable_path=path,options=options)
+    # options = Options()
+    options = webdriver.FirefoxOptions()
+    options.add_argument("--remote-debugging-port=9224")
+	options.add_argument("--headless")
+	options.add_argument("--disable-gpu")
+	options.add_argument("--no-sandbox")
+    # options.add_argument('--headless')
+    binary = FirefoxBinary(os.environ.get('FIREFOX_BIN'))
+    driver = webdriver.Firefox(executable_path=os.environ.get('GECKODRIVER_PATH'),firefox_binary=binary,options=options)
     driver.get("https://new.edmodo.com/calendar/schedule")
     time.sleep(5)
     username_element=driver.find_element_by_name("username")
