@@ -1,9 +1,6 @@
 myvenv
-binary
+__pycache__
 creds.py
-<<<<<<< HEAD
-mobile_app/fullcalendar-example-projects/react/node_modules
-=======
 node_modules
 mob/node_modules
->>>>>>> 991b4796feb48bb0fa7452f550ebe5d3fb184d78
+myv

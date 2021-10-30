@@ -13,10 +13,12 @@ export default class DemoApp extends React.Component {
     this.state = {
       weekendsVisible: true,
       currentEvents: [],
-      calEvents:[]
+      calEvents:[],
+      loading:false
     }
   }
   componentDidMount(){
+    this.setState({...this.state,loading:true})
     axios.get("http://127.0.0.1:5000/api/get_assignments")
     .then(res=>{
       // var res={}
@@ -37,7 +39,7 @@ export default class DemoApp extends React.Component {
       element.start=dateArray.join("-")  
       console.log("eve",Events)
     }
-    this.setState({...this.state,calEvents:Events,currentEvents:Events})
+    this.setState({...this.state,calEvents:Events,currentEvents:Events,loading:false})
     // console.log(Events)
     })
     .catch(err=>{console.log(err)})
@@ -48,8 +50,11 @@ export default class DemoApp extends React.Component {
   
   
   render() {
-    console.log(INITIAL_EVENTS)
-    console.log(this.state)
+    const { loading } = this.state
+    if(loading){
+      return(<>Loading</>)
+    }
+    else{
     return (
       <div className='demo-app'>
         {/* {this.renderSidebar()} */}
@@ -83,6 +88,7 @@ export default class DemoApp extends React.Component {
         </div>
       </div>
     )
+          }
   }
 
   renderSidebar() {

@@ -3,8 +3,23 @@ import { render } from 'react-dom'
 import DemoApp from './DemoApp'
 import './main.css'
 
+
+
+
+function App() {
+  return (
+    <>
+    
+    </>
+  );
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   render(
+
     <DemoApp />,
     document.body.appendChild(document.createElement('div'))
   )

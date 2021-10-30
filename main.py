@@ -7,7 +7,8 @@ from creds import username,password
 import sys
 import time
 def get_assignments():
-    path=sys.path[0]+'\\binary\\binary.exe'
+    path=sys.path[0]+'/binary/geckodriver'
+    print(path)
     options = Options()
     options.add_argument('--headless')
     driver = webdriver.Firefox(executable_path=path,options=options)
@@ -20,6 +21,10 @@ def get_assignments():
     driver.find_element_by_id("qa-test-lightbox-login").click()
     time.sleep(5)
     outputArray=[]
+    elem = driver.find_elements_by_xpath(".//*[@class='schedule-group-title']")
+    if len(elem)==0:
+        print("Enjoy your life")
+        return {'status':404,'message':"no assignments for now"}
     first_assi_heading=driver.find_element_by_class_name("schedule-group-title")
     parent=first_assi_heading.find_element_by_xpath("..")
     outerParent=parent.find_element_by_xpath("..")
@@ -35,7 +40,6 @@ def get_assignments():
         outputObject["Date"]="-".join(testChild.find_element_by_class_name("schedule-group-title").find_elements_by_css_selector("*")[1].get_attribute("innerHTML").split("/")[::-1])
         for j in range(0,len(testChild.find_elements_by_class_name("fc-time"))):
             assignments={}
-            
             assignments["Time"]=testChild.find_elements_by_class_name("fc-time")[j].get_attribute("innerHTML")
             assignments["Title"]=testChild.find_elements_by_class_name("title")[j].get_attribute("innerHTML")
             assignments["Group-name"]=testChild.find_elements_by_class_name("group-name")[j].get_attribute("innerHTML")
@@ -52,4 +56,4 @@ def get_assignments():
     driver.close()
     return outputArray
 
-# get_assignments()
+get_assignments()
