@@ -1745,3 +1745,58 @@ console.log: WebExtensions: reset-default-search: No addons in our list are inst
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 1635598117588	geckodriver	INFO	Listening on 127.0.0.1:55387
 1635598388327	geckodriver	INFO	Listening on 127.0.0.1:44301
+1635600029789	geckodriver	INFO	Listening on 127.0.0.1:39643
+1635600029793	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileyWsU6b"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600034835	geckodriver	INFO	Listening on 127.0.0.1:33009
+1635600034838	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileFKpU8J"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600125431	geckodriver	INFO	Listening on 127.0.0.1:42875
+1635600125435	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileT68Zoa"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600198391	geckodriver	INFO	Listening on 127.0.0.1:40423
+1635600198395	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileE4NNVg"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600241679	geckodriver	INFO	Listening on 127.0.0.1:53439
+1635600241683	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileUp9UN8"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600361960	geckodriver	INFO	Listening on 127.0.0.1:34127
+1635600361963	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileTyrem0"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600454170	geckodriver	INFO	Listening on 127.0.0.1:55049
+1635600454173	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofiledaPfYy"
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /run/user/1000/gdm/Xauthority which is owned by aman.)
+1635600658288	geckodriver	INFO	Listening on 127.0.0.1:41913
+1635600659292	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofileJKFSBq"
+*** You are running in headless mode.
+1635600659777	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJKFSBq/search.json.mozlz4", (void 0)))
+1635600660771	Marionette	INFO	Listening on port 44105
+1635600660814	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635600728316	Marionette	INFO	Stopped listening on port 44105
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: , line 0: uncaught exception: Object
+1635600762755	geckodriver	INFO	Listening on 127.0.0.1:47123
+1635600762758	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofile47xsCU"
+*** You are running in headless mode.
+1635600763088	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile47xsCU/search.json.mozlz4", (void 0)))
+1635600764045	Marionette	INFO	Listening on port 41219
+1635600764079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635600791833	Marionette	INFO	Stopped listening on port 41219
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1635600944997	geckodriver	INFO	Listening on 127.0.0.1:39961
+1635600945001	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-no-remote" "-profile" "/tmp/rust_mozprofilei5bOI5"
+*** You are running in headless mode.
+1635600945380	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilei5bOI5/search.json.mozlz4", (void 0)))
+1635600946315	Marionette	INFO	Listening on port 41563
+1635600946441	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635600964872	Marionette	INFO	Stopped listening on port 41563
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
