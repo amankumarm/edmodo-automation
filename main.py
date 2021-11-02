@@ -17,9 +17,9 @@ def get_assignments():
     driver.get("https://new.edmodo.com/calendar/schedule")
     time.sleep(5)
     username_element=driver.find_element_by_name("username")
-    username_element.send_keys(username)
+    username_element.send_keys("amankumarm441@gmail.com")
     password_element=driver.find_element_by_name("password")
-    password_element.send_keys(password)
+    password_element.send_keys("thisisedmodopassword")
     driver.find_element_by_id("qa-test-lightbox-login").click()
     time.sleep(5)
     outputArray=[]
@@ -58,4 +58,4 @@ def get_assignments():
     driver.close()
     return outputArray
 
-get_assignments()
+# print(get_assignments())
