@@ -1,17 +1,19 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import Select,WebDriverWait
 from creds import username,password 
 import sys
+import os
 import time
 def get_assignments():
-    path=sys.path[0]+'/binary/geckodriver'
-    print(path)
-    options = Options()
-    options.add_argument('--headless')
-    driver = webdriver.Firefox(executable_path=path,options=options)
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get("https://new.edmodo.com/calendar/schedule")
     time.sleep(5)
     username_element=driver.find_element_by_name("username")

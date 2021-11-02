@@ -1,6 +1,7 @@
 myvenv
 __pycache__
-creds.py
 node_modules
+binary
 mob/node_modules
 myv
+mobile_app

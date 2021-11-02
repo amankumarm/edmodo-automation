@@ -10,5 +10,3 @@ def home():
     result=get_assignments()
     return jsonify(result)
     # return render_template('pages/placeholder.home.html')
-if __name__ == '__main__':
-    app.run()

@@ -857,7 +857,8 @@ console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "res
 1635523729137	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
 1635524237125	addons.xpi	ERROR	System addon update list error Error: got node name: parsererror, expected: updates
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
-rionette" "--headless" "-no-remote" "-profile" "C:\\Users\\AMANKU~1\\AppData\\Local\\Temp\\rust_mozprofileKgQLm1"
+Exiting due to channel error.
+ote" "-profile" "C:\\Users\\AMANKU~1\\AppData\\Local\\Temp\\rust_mozprofileKgQLm1"
 *** You are running in headless mode.
 1635523737985	Marionette	INFO	Marionette enabled
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
@@ -1743,5 +1744,6 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 console.log: WebExtensions: reset-default-search: starting.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
-1635598117588	geckodriver	INFO	Listening on 127.0.0.1:55387
-1635598388327	geckodriver	INFO	Listening on 127.0.0.1:44301
+Exiting due to channel error.
+Exiting due to channel error.
+35598388327	geckodriver	INFO	Listening on 127.0.0.1:44301
