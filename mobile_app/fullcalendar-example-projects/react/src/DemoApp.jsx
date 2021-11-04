@@ -5,7 +5,74 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 import './App.css'
+import styled from "@emotion/styled";
 import axios from "axios"
+
+export const GlobalWrapper=styled.body`
+  font-family: Tahoma, sans-serif;
+`
+
+export const StyleWrapper=styled.div`
+
+.demo-app{
+  font-family:futura;
+}
+/* Border around dates */
+.fc-today {
+  opacity: 0;
+  border: none;
+}
+.fc td, .fc th {
+  border-style: none !important;
+}
+.fc-event.fc-bg {
+  z-index: 1;
+  background: inherit;
+  opacity: .25;
+}
+
+.fc-time-grid-event.fc-v-event.fc-event {
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+}
+
+.fc td, .fc th {
+    border-style: none;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
+}
+
+.fc-event .fc-bg {
+    z-index: 1;
+    background: inherit;
+    opacity: .25;
+    filter: alpha(opacity=25);
+}
+
+/* Border around dates */
+
+.fc .fc-daygrid-day-events{
+  margin-top:25px;
+}
+
+
+.fc-theme-standard .fc-scrollgrid{
+  border:1px solid white;
+}
+
+.demo-app-main{
+  padding:20px;
+}
+.fc-daygrid-day-frame{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+`
+
 export default class DemoApp extends React.Component {
   constructor(props) {
     super(props)
@@ -54,18 +121,18 @@ export default class DemoApp extends React.Component {
     if(loading){
       return(<>Loading</>)
     }
+
     else{
     return (
+    <StyleWrapper>
       <div className='demo-app'>
-        {/* {this.renderSidebar()} */}
         <div className='demo-app-main'>
-          <button>Update</button>
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
-              left: 'prev,today,next',
+              left: 'prev',
               center: 'title',
-              right: 'dayGridMonth'
+              right: 'next'
             }}
             initialView='dayGridMonth'
             editable={true}
@@ -87,6 +154,8 @@ export default class DemoApp extends React.Component {
           />
         </div>
       </div>
+    </StyleWrapper>
+    
     )
           }
   }
@@ -162,7 +231,7 @@ export default class DemoApp extends React.Component {
 function renderEventContent(eventInfo) {
   return (
     <>
-      <b>{eventInfo.timeText}</b>
+      {/* <b>{a}</b> */}
       <i>{eventInfo.event.title}</i>
     </>
   )
