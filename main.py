@@ -23,7 +23,7 @@ def get_assignments():
     username_element=driver.find_element_by_name("username")
     username_element.send_keys("amankumarm441@gmail.com")
     password_element=driver.find_element_by_name("password")
-    password_element.send_keys("thisisedmodopassword")
+    password_element.send_keys("passwordhere")
     driver.find_element_by_id("qa-test-lightbox-login").click()
     time.sleep(5)
     outputArray=[]
