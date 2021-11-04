@@ -19,7 +19,7 @@ export default class DemoApp extends React.Component {
   }
   componentDidMount(){
     this.setState({...this.state,loading:true})
-    axios.get("http://127.0.0.1:5000/api/get_assignments")
+    axios.get("https://edmodo-automation.herokuapp.com/api/get_assignments")
     .then(res=>{
       // var res={}
       // res.data=[{"Date":"2021-31-10","assigns":[{"id":0,"start":"2021-31-10","title":" DBMS LAB-5AWeek 8 submission"},{"id":1,"start":"2021-31-10","title":"CNS_2021_Aug_DecLab - 5  Remote DNS cache Poisoning Attack Lab"}]},{"Date":"2021-03-11","assigns":[{"id":0,"start":"2021-03-11","title":"CNS_2021_Aug_DecAssignment - 6"}]},{"Date":"2021-14-11","assigns":[{"id":0,"start":"2021-14-11","title":"2021_Odd_CS301_DBMS_ADBMS Assignment-4"}]}]
