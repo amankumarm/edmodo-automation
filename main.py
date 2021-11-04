@@ -7,16 +7,17 @@ from creds import username,password
 import sys
 import os
 import time
-import json
+import dill
 def get_assignments():
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    # chrome_options.binary_location = "./binary/chrome-95/chromedriver" # remove this is production
+    # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options.binary_location = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" # remove this is production
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options) 
-    # driver = webdriver.Chrome(executable_path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", options=chrome_options)  #remove  this in production
+    # driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options) 
+
+    driver = webdriver.Chrome(executable_path="./binary/chrome-95/chromedriver.exe", options=chrome_options)  #remove  this in production
     driver.get("https://new.edmodo.com/calendar/schedule")
     time.sleep(5)
     username_element=driver.find_element_by_name("username")
@@ -57,10 +58,7 @@ def get_assignments():
             count=count+1
             outputObject['assigns'].append(assignments)
         outputArray.append(outputObject)
-    time.sleep(5)
-    driver.close()
-    with open('./cache/result.json', 'w') as fp:
-        json.dump(outputArray, fp)
+    driver.close()    
     return outputArray
 
 # print(get_assignments())
